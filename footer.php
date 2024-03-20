@@ -2,7 +2,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Elizabeth Vazquez-2024</span>
+            <span>Copyright &copy; Exlamux6-2024</span>
         </div>
     </div>
 </footer>
