@@ -63,8 +63,8 @@ require 'header.php';
                                     <td><?php echo $persona['amaterno']; ?></td>
                                     <td><?php echo $persona['telefono']; ?></td>
                                     <td><?php echo $persona['domicilio']; ?></td>
-                                    <td><button type="button" class="btn btn-info">Editar</button></td>
-                                    <td><button type="button" class="btn btn-danger">Eliminar</button></td>
+                                    <td><a href="editarcontacto.php?id=<?php echo $persona['id'] ?>" class="btn btn-info">Editar</a></td>
+                                    <td><a href="eliminarcontacto.php?id=<?php echo $persona['id'] ?>" class="btn btn-danger">Eliminar</a></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
