@@ -1,4 +1,6 @@
 <?php
+require 'conexion.php';
+require 'consultas.php';
 require 'header.php';
 ?>
 
@@ -47,11 +49,18 @@ require 'header.php';
                             </tr>
                         </tfoot>
                         <tbody>
+                            <?php
+                            $conexion = conexion::dbconexion();
+                            $tabla = 'contactos';
+                            $personas = getAll($tabla, $conexion);
+                            foreach ($personas as $persona):
+                            ?>
                             <td>Donna Snider</td>
                             <td>Customer Support</td>
                             <td>New York</td>
                             <td>27</td>
                             <td>2011/01/25</td>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
