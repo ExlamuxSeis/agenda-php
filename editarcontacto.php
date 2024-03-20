@@ -1,4 +1,7 @@
 <?php
+
+    require 'conexion.php';
+    require 'consultas.php';
 require 'header.php';
 ?>
 
@@ -27,26 +30,34 @@ require 'header.php';
             <!-- Card Body -->
             <div class="card-body">
                     <form method="post" action="actualizarcontacto.php">
+                        <?php
+                        $tabla = 'contactos';
+                        $id = $_GET['id'];
+                        $conn = conexion::dbconexion();
+                        $persona = getRegistro($conn, $tabla, $id);
+                        foreach ($persona as $persona) :
+                        ?>
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" autofocus id="nombre" name="nombre">
+                            <input type="text" class="form-control" value="<?php echo $persona['nombre'] ?>" autofocus id="nombre" name="nombre">
                         </div>
                         <div class="mb-3">
                             <label for="paterno" class="form-label">Apellido paterno:</label>
-                            <input type="text" class="form-control" id="paterno" name="paterno">
+                            <input type="text" class="form-control" value="<?php echo $persona['apaterno'] ?>" id="paterno" name="paterno">
                         </div>
                         <div class="mb-3">
                             <label for="materno" class="form-label">Apellido materno:</label>
-                            <input type="text" class="form-control" id="materno" name="materno">
+                            <input type="text" class="form-control" value="<?php echo $persona['amaterno'] ?>" id="materno" name="materno">
                         </div>
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Telefono:</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono">
+                            <input type="number" class="form-control" value="<?php echo $persona['telefono'] ?>" id="telefono" name="telefono">
                         </div>
                         <div class="mb-3">
                             <label for="domicilio" class="form-label">Domicilio:</label>
-                            <input type="text" class="form-control" id="domicilio" name="domicilio">
+                            <input type="text" class="form-control" value="<?php echo $persona['domicilio'] ?>" id="domicilio" name="domicilio">
                         </div>
+                        <?php endforeach; ?>
                         <button type="submit" class="btn btn-success">Actualizar</button>
                     </form>
             </div>
