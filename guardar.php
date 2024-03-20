@@ -2,7 +2,9 @@
 
 require 'conexion.php';
 require 'consultas.php';
+
 //var_dump($_POST);
+
 $tabla = 'contactos';
 $parametros = [
     'nombre' => $_POST['nombre'],
@@ -11,6 +13,7 @@ $parametros = [
     'telefono' => $_POST['telefono'],
     'domicilio' => $_POST['domicilio']
 ];
+
 $conexion = conexion::dbconexion();
 crear($tabla, $parametros, $conexion);
 header('Location: index.php');
