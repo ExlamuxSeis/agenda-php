@@ -48,6 +48,7 @@ function actualizar($tabla, $parametros, $conn, $id)
     $query->execute($parametros);
 }
 
+// Eliminar un registro
 function eliminar($conn, $tabla, $id){
     $query = $conn->prepare("delete from {$tabla} where id=$id");
     $query->execute();
