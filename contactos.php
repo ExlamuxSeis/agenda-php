@@ -50,16 +50,18 @@ require 'header.php';
                         </tfoot>
                         <tbody>
                             <?php
-                            $conexion = conexion::dbconexion();
+                            $conn = conexion::dbconexion();
                             $tabla = 'contactos';
-                            $personas = getAll($tabla, $conexion);
-                            foreach ($personas as $persona):
+                            $personas = getAll($conn, $tabla);
+                            foreach ($personas as $persona) :
                             ?>
-                            <td>Donna Snider</td>
-                            <td>Customer Support</td>
-                            <td>New York</td>
-                            <td>27</td>
-                            <td>2011/01/25</td>
+                                <tr>
+                                    <td><?php echo $persona['nombre']; ?></td>
+                                    <td><?php echo $persona['apaterno']; ?></td>
+                                    <td><?php echo $persona['amaterno']; ?></td>
+                                    <td><?php echo $persona['telefono']; ?></td>
+                                    <td><?php echo $persona['domicilio']; ?></td>
+                                </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
