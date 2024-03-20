@@ -53,3 +53,15 @@ function eliminar($conn, $tabla, $id){
     $query = $conn->prepare("delete from {$tabla} where id=$id");
     $query->execute();
 }
+
+// Extraer un registro específico
+function getAll2($conn, $tabla, $where)
+{
+    try {
+        $query = $conn->prepare("select * from {$tabla} {$where}");
+        $query->execute();
+        return $query->fetchAll();
+    } catch (PDOException $error) {
+        die($error->getMessage());
+    }
+}

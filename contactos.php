@@ -2,6 +2,15 @@
 require 'conexion.php';
 require 'consultas.php';
 require 'header.php';
+
+//var_dump($_POST);
+$where = '';
+if (!empty($_POST)) {
+    $valor = $_POST['nombre'];
+    if (!empty($valor)) {
+        $where = "WHERE nombre LIKE '%$valor%'";
+    }
+}
 ?>
 
 <!-- Page Heading -->
@@ -17,8 +26,13 @@ require 'header.php';
     <div class="col-xl-12 col-lg-7">
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <div class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Sistema para Guardar Contacto</h6>
+                <!-- Buscar registros -->
+                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+                    <input type="text" class="form-control" name="nombre" id="nombre">
+                    <button class="btn btn-primary">Buscar</button>
+                </form>
                 <div class="dropdown no-arrow">
                     <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
@@ -54,7 +68,7 @@ require 'header.php';
                             <?php
                             $conn = conexion::dbconexion();
                             $tabla = 'contactos';
-                            $personas = getAll($conn, $tabla);
+                            $personas = getAll2($conn, $tabla, $where);
                             foreach ($personas as $persona) :
                             ?>
                                 <tr>
