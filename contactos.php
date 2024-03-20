@@ -4,8 +4,7 @@ require 'header.php';
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Agregar Contacto</a>
+    <h1 class="h3 mb-0 text-gray-800">Contactos</h1>
 </div>
 
 <!-- Content Row -->
@@ -27,8 +26,34 @@ require 'header.php';
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido paterno</th>
+                                <th>Apellido materno</th>
+                                <th>Telefono</th>
+                                <th>Domicilio</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Apellido paterno</th>
+                                <th>Apellido materno</th>
+                                <th>Telefono</th>
+                                <th>Domicilio</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <td>Donna Snider</td>
+                            <td>Customer Support</td>
+                            <td>New York</td>
+                            <td>27</td>
+                            <td>2011/01/25</td>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
