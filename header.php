@@ -55,13 +55,13 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="contactos.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Contactos</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="guardar.php">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Agregar Contactos</span></a>
             </li>
