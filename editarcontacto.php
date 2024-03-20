@@ -37,6 +37,7 @@ require 'header.php';
                         $persona = getRegistro($conn, $tabla, $id);
                         foreach ($persona as $persona) :
                         ?>
+                        <input type="hidden" name="id" value="<?php echo $persona['id'] ?>">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre:</label>
                             <input type="text" class="form-control" value="<?php echo $persona['nombre'] ?>" autofocus id="nombre" name="nombre">
