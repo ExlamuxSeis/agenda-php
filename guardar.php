@@ -16,4 +16,4 @@ $parametros = [
 
 $conexion = conexion::dbconexion();
 crear($tabla, $parametros, $conexion);
-header('Location: index.php');
+header('Location: contactos.php');
