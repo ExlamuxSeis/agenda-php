@@ -59,6 +59,7 @@ require 'header.php';
                         </div>
                         <?php endforeach; ?>
                         <button type="submit" class="btn btn-success">Actualizar</button>
+                        <a href="contactos.php" class="btn btn-primary">Regresar</a>
                     </form>
             </div>
         </div>
