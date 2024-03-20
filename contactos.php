@@ -37,6 +37,7 @@ require 'header.php';
                                 <th>Apellido materno</th>
                                 <th>Telefono</th>
                                 <th>Domicilio</th>
+                                <th colspan="2" class="text-center">Acciones</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -46,6 +47,7 @@ require 'header.php';
                                 <th>Apellido materno</th>
                                 <th>Telefono</th>
                                 <th>Domicilio</th>
+                                <th colspan="2" class="text-center">Acciones</th>
                             </tr>
                         </tfoot>
                         <tbody>
@@ -61,6 +63,8 @@ require 'header.php';
                                     <td><?php echo $persona['amaterno']; ?></td>
                                     <td><?php echo $persona['telefono']; ?></td>
                                     <td><?php echo $persona['domicilio']; ?></td>
+                                    <td><button type="button" class="btn btn-info">Editar</button></td>
+                                    <td><button type="button" class="btn btn-danger">Eliminar</button></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
