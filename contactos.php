@@ -64,7 +64,7 @@ require 'header.php';
                                     <td><?php echo $persona['telefono']; ?></td>
                                     <td><?php echo $persona['domicilio']; ?></td>
                                     <td><a href="editarcontacto.php?id=<?php echo $persona['id'] ?>" class="btn btn-info">Editar</a></td>
-                                    <td><a href="eliminarcontacto.php?id=<?php echo $persona['id'] ?>" class="btn btn-danger">Eliminar</a></td>
+                                    <td><a onclick="eliminar()" href="eliminarcontacto.php?id=<?php echo $persona['id'] ?>" class="btn btn-danger">Eliminar</a></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
