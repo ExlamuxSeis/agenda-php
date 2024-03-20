@@ -26,7 +26,7 @@ require 'header.php';
             </div>
             <!-- Card Body -->
             <div class="card-body">
-                    <form method="post" action="">
+                    <form method="post" action="guardar.php">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nombre:</label>
                             <input type="text" class="form-control" autofocus id="nombre" name="nombre">
