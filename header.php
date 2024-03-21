@@ -20,8 +20,8 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
     <!-- Custom styles for this DataTables -->
-    <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
-<script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/dataTable.css">
+    <script src="js/dataTable.js"></script>
 
 </head>
 
