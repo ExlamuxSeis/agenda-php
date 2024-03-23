@@ -24,6 +24,7 @@ if (!empty($_POST)) {
 
     <!-- Area Chart -->
     <div class="col-xl-12 col-lg-7">
+        <a href="reportes.php" class="btn btn-success">Reporte pdf</a>
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-2 d-flex flex-row align-items-center justify-content-between">
